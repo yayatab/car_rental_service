@@ -1,0 +1,938 @@
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 9.63ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.87ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.71ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.00ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.34ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.58ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.34ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.51ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.65ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.93ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.26ms
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.30ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.39ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.23ms
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:18:25.415951
+2026-08-24 15:18:25 | ERROR    | car_rental | [HTTP_ERROR] POST /api/v1/rentals/1/end failed with ValidationError: 1 validation error for RentalResponse
+car
+  Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s) [type=get_attribute_error, input_value=<Rental(id=1, car_id=1, c...l Craig', active=False)>, input_type=Rental]
+    For further information visit https://errors.pydantic.dev/2.13/v/get_attribute_error
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.53ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 5.38ms
+2026-08-24 15:18:25 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.91ms
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:18:25.783147
+2026-08-24 15:18:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:18:25 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:18:25.800581
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 30.43ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.84ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.04ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.06ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.20ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.74ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.57ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.51ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.94ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.85ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.63ms
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.40ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.32ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.22ms
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:18:39.460412
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.11ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 0.97ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.40ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 6.33ms
+2026-08-24 15:18:39 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.17ms
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:18:39.647722
+2026-08-24 15:18:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:18:39 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:18:39.666118
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 14.67ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 2.09ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 4.19ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.57ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.32ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.10ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.81ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.19ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.87ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 2.83ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.81ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.86ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.86ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.26ms
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.71ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.33ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.20ms
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:19:05.271978
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.34ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.03ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.57ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 1.92ms
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.09ms
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 2.84ms
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:19:05.302729
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.08ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.74ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.54ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.30ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 4.99ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 5.03ms
+2026-08-24 15:19:05 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.24ms
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:19:05 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'event_type': 'CarStatusChangedEvent', 'occurred_at': '2026-08-24T12:19:05.471300+00:00'}
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:19:05.521114
+2026-08-24 15:19:05 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:19:05 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:19:05.541100
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 37.16ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.78ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.43ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.53ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.15ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.17ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.77ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.42ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.36ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 2.96ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.05ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.75ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.72ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.80ms
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.88ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.13ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.30ms
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:19:31.622040
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.44ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 0.98ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.38ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.16ms
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 4.76ms
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.05ms
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:19:31.655566
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.33ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.78ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.64ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.23ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.04ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 5.04ms
+2026-08-24 15:19:31 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.30ms
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:19:31 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T12:19:31.817793+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:19:31.871518
+2026-08-24 15:19:31 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:19:31 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:19:31.891432
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 11.51ms
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.90ms
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.37ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.27ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.20ms
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.14ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.06ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.17ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.18ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.49ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.66ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.76ms
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.73ms
+2026-08-24 15:19:39 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.89ms
+2026-08-24 15:19:39 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 7.24ms
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.14ms
+2026-08-24 15:19:39 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.22ms
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:19:39.999337
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.08ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 0.95ms
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.43ms
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.17ms
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.32ms
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.05ms
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:19:40.031346
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 3.92ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.80ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.93ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.17ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.03ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.65ms
+2026-08-24 15:19:40 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.28ms
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:19:40 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T12:19:40.287136+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:19:40.337699
+2026-08-24 15:19:40 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:19:40 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:19:40.355431
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 10.54ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.88ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.15ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.79ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.27ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.19ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.15ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.25ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.98ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.29ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.49ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.89ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.93ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.93ms
+2026-08-24 15:20:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.03ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.14ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.25ms
+2026-08-24 15:20:10 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:20:10.817291
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.12ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 0.99ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.81ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.07ms
+2026-08-24 15:20:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.16ms
+2026-08-24 15:20:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 2.92ms
+2026-08-24 15:20:10 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:20:10.846657
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.76ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.90ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.67ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.45ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.01ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.68ms
+2026-08-24 15:20:10 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.31ms
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:20:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:20:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:20:11 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:20:11 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T12:20:11.086518+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 15:20:11 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:11 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:20:11 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:11 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:11 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:20:11 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:20:11.134066
+2026-08-24 15:20:11 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:20:11 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:20:11 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:20:11.151822
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 11.38ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.87ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.74ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.09ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.42ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.13ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.73ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.41ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 12.41ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 6.59ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.29ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.99ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.77ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.74ms
+2026-08-24 15:20:24 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.96ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.39ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.21ms
+2026-08-24 15:20:24 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:20:24.945438
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.36ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.06ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.95ms
+2026-08-24 15:20:24 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.33ms
+2026-08-24 15:20:24 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.81ms
+2026-08-24 15:20:24 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.13ms
+2026-08-24 15:20:24 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:20:24.981796
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 6.83ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.88ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.81ms
+2026-08-24 15:20:24 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.41ms
+2026-08-24 15:20:25 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.82ms
+2026-08-24 15:20:25 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 5.13ms
+2026-08-24 15:20:25 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.66ms
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:20:25 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T12:20:25.222920+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:20:25.320280
+2026-08-24 15:20:25 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:20:25 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:20:25.340640
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 10.48ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.90ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.17ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.30ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.58ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.86ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 8.17ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 4.77ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.09ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 4.12ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.51ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 3.12ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 1.27ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.96ms
+2026-08-24 15:21:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 7.12ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.49ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.33ms
+2026-08-24 15:21:09 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:21:09.864174
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.66ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.11ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.71ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.24ms
+2026-08-24 15:21:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.59ms
+2026-08-24 15:21:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.08ms
+2026-08-24 15:21:09 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:21:09.899046
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 5.09ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.90ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.67ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.46ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 6.07ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 5.23ms
+2026-08-24 15:21:09 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.32ms
+2026-08-24 15:21:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:21:10 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T12:21:10.166530+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:21:10.215430
+2026-08-24 15:21:10 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:21:10 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:21:10.233666
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 15:46:28 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 12:46:28.915651
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 15:46:28 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 15:46:28 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 12:46:28.941886
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:46:28 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 15:46:29 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T12:46:29.110430+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 12:46:29.145515
+2026-08-24 15:46:29 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 15:46:29 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 12:46:29.159003
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 11.80ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.56ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.37ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.82ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.48ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.67ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.10ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.83ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.66ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.25ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.03ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 3.19ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 1.02ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.08ms
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.18ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 2.05ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.55ms
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 14:01:01.411090
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.80ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 0.97ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.44ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.47ms
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 5.25ms
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.13ms
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 14:01:01.441788
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.21ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.85ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.98ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.35ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 4.58ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.01ms
+2026-08-24 17:01:01 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.15ms
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 17:01:01 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T14:01:01.635399+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 14:01:01.671785
+2026-08-24 17:01:01 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 17:01:01 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 14:01:01.685820
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 12.33ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 2.28ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.53ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.84ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 3.07ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.75ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.81ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.55ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.74ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.08ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.30ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 3.33ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.79ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.47ms
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 7.35ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 3.23ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.40ms
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 14:13:38.597707
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 5.40ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.13ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.78ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.14ms
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.67ms
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.24ms
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 14:13:38.629607
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.32ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.98ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.69ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.22ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 9.80ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 6.41ms
+2026-08-24 17:13:38 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 0.97ms
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 17:13:38 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T14:13:38.818196+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 14:13:38.852787
+2026-08-24 17:13:38 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 17:13:38 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 14:13:38.865987
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 13.24ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.73ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 4.02ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 12.30ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.78ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.56ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.60ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.66ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.30ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.73ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.63ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 3.19ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.81ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.69ms
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 7.19ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.25ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.37ms
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 14:24:09.276974
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 5.02ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.06ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.47ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.05ms
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.39ms
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.21ms
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 14:24:09.309232
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.44ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 2.00ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.65ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.21ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 5.16ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.68ms
+2026-08-24 17:24:09 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.14ms
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 17:24:09 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T14:24:09.489526+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 14:24:09.523823
+2026-08-24 17:24:09 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 17:24:09 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 14:24:09.537765
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 11.96ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.78ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.29ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.28ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.55ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.16ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 4.93ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.25ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.59ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 2.99ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.03ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.78ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.79ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.24ms
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.29ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.23ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.31ms
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 14:25:00.103264
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.36ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.03ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.42ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.14ms
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 4.96ms
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 2.85ms
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 14:25:00.132826
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.39ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.97ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.54ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.21ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 4.57ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.65ms
+2026-08-24 17:25:00 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.60ms
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 17:25:00 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T14:25:00.298822+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 14:25:00.331208
+2026-08-24 17:25:00 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 17:25:00 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 14:25:00.344794
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 10.88ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.83ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.34ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.64ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.16ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.61ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.00ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.77ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.50ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.34ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.04ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.85ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.77ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.22ms
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.46ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.22ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.19ms
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 14:25:19.686953
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.49ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 0.96ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.77ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.00ms
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 4.82ms
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 3.01ms
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 14:25:19.714485
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 3.98ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.79ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.78ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.21ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 4.41ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.42ms
+2026-08-24 17:25:19 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 0.84ms
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 17:25:19 | INFO     | car_rental | [EVENT_PUBLISHED] CarStatusChangedEvent - {'event_id': 'evt-1', 'occurred_at': '2026-08-24T14:25:19.869965+00:00', 'event_type': 'CarStatusChangedEvent', 'car_id': 1, 'old_status': 'AVAILABLE', 'new_status': 'IN_USE'}
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 14:25:19.902645
+2026-08-24 17:25:19 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 17:25:19 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 14:25:19.915331
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda CX-5' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 32.53ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.74ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 422 - Duration: 3.21ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car A' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.34ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car B' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.01ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/cars - Status: 200 - Duration: 2.04ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='BMW 3 Series' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.79ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] PATCH /api/v1/cars/1/status - Status: 200 - Duration: 3.37ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Old Model' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.23ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] PUT /api/v1/cars/1 - Status: 200 - Duration: 3.56ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Audi A3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 5.62ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_DELETED] ID=1 | Model='Audi A3'
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] DELETE /api/v1/cars/1 - Status: 204 - Duration: 2.71ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 404 - Duration: 0.76ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia EV6' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 6.17ms
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Daniel Craig'
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 6.68ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.12ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 409 - Duration: 1.15ms
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Daniel Craig' | EndDate=2026-08-24 14:29:52.640005
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/1/end - Status: 200 - Duration: 4.20ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/cars/1 - Status: 200 - Duration: 1.13ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car X' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 7.39ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car Y' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/cars - Status: 201 - Duration: 2.08ms
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='User 1'
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 4.74ms
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=2 | CarID=2 | Customer='User 2'
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 201 - Duration: 2.94ms
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_ENDED] RentalID=2 | CarID=2 | Customer='User 2' | EndDate=2026-08-24 14:29:52.669500
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/2/end - Status: 200 - Duration: 4.01ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 2.00ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/rentals - Status: 200 - Duration: 1.74ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /api/v1/rentals/1 - Status: 200 - Duration: 1.12ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals - Status: 404 - Duration: 4.34ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] POST /api/v1/rentals/9999/end - Status: 404 - Duration: 4.20ms
+2026-08-24 17:29:52 | INFO     | car_rental | [HTTP] GET /health - Status: 200 - Duration: 1.75ms
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Corolla' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Car 1' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=2 | Model='Car 2' | Year=2022 | Status=IN_USE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=3 | Model='Car 3' | Year=2023 | Status=UNDER_MAINTENANCE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Hyundai Ioniq' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_UPDATED] ID=1 | Status=UNDER_MAINTENANCE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Tesla Model 3' | Year=2024 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice'
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Mazda 3' | Year=2021 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Bob'
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Toyota Yaris' | Year=2022 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Alice Smith'
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Honda Civic' | Year=2021 | Status=UNDER_MAINTENANCE
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Ford Focus' | Year=2023 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='David'
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='David' | EndDate=2026-08-24 14:29:52.867919
+2026-08-24 17:29:52 | INFO     | car_rental | [CAR_ADDED] ID=1 | Model='Kia Rio' | Year=2020 | Status=AVAILABLE
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_STARTED] RentalID=1 | CarID=1 | Customer='Eve'
+2026-08-24 17:29:52 | INFO     | car_rental | [RENTAL_ENDED] RentalID=1 | CarID=1 | Customer='Eve' | EndDate=2026-08-24 14:29:52.880939

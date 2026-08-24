@@ -1,20 +1,44 @@
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8.0
     container_name: db-mysql
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: rental_service
       MYSQL_USER: rental_shop
-      MYSQL_PASSWORD: rental_shop #in real world application - use hashicorp or env var/helm chart
+      MYSQL_PASSWORD: rental_shop
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./resources/sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "rental_shop", "-prental_shop" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
-
-
+  api:
+    build:
+      context: .
+      dockerfile: dockerfiles/Api.Dockerfile
+    container_name: car-rental-api
+    restart: unless-stopped
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: rental_shop
+      DB_PASSWORD: rental_shop
+      DB_NAME: rental_service
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./logs:/app/logs
 
 volumes:
   mysql_data:
