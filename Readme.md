@@ -23,7 +23,7 @@ Your goal is to develop a Python-based service (either a REST API or a simple CL
 ### Technical Requirements
 
 #### 1. Database 
-* Use any SQL or NOSQL database: MySQL / MongoDB / Other. Explain your choice. 
+* Use any SQL or NOSQL database: MySQL / MongoDB / Other. Explain your choice. chose: [mysql](reasoning.md#db_choice)
 * Define a basic schema with the following tables: 
   * cars – car ID, model, year, status 
   * rentals – rental ID, car ID, customer name, start date, end date 
