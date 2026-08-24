@@ -12,7 +12,7 @@ from src.core.config import get_settings
 settings = get_settings()
 
 engine: AsyncEngine = create_async_engine(
-    settings.DATABASE_ASYNC_URL,
+    settings.database_async_url,
     echo=settings.DB_ECHO,
     pool_pre_ping=True,
     pool_size=10,

@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 from datetime import datetime
+from typing import TYPE_CHECKING
 
 from sqlalchemy import DateTime, ForeignKey, Integer, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.dal.models.base import Base, TimestampMixin
-from src.dal.models.car import Car
+
+if TYPE_CHECKING:
+    from src.dal.models.car import Car
 
 
 class Rental(Base, TimestampMixin):

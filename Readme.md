@@ -1,9 +1,6 @@
 # DriveNow – Vehicle Management & Rental System
 
-[![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-009688.svg)](https://fastapi.tiangolo.com)
-[![SQLAlchemy 2.0](https://img.shields.io/badge/SQLAlchemy-2.0%20Async-red.svg)](https://www.sqlalchemy.org/)
-[![Tests](https://img.shields.io/badge/Tests-47%20Passed%20(92%25%20Coverage)-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-45%20Passed%20(92%25%20Coverage)-brightgreen.svg)]()
 
 DriveNow is an enterprise-grade vehicle fleet and rental transaction management service. Designed with **Layered Clean
 Architecture**, SOLID principles, fully asynchronous database I/O, Pydantic V2 data validation, Prometheus metrics,
@@ -13,7 +10,7 @@ For detailed architecture rationale and database selection analysis, see [reason
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Fleet Management**: Add, update, delete, and list vehicles with status filtering (`AVAILABLE`, `IN_USE`,
   `UNDER_MAINTENANCE`).
@@ -29,29 +26,30 @@ For detailed architecture rationale and database selection analysis, see [reason
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 CarRental/
 ├── src/
-│   ├── api/             # Presentation Layer: FastAPI routers, dependencies, and middleware
-│   ├── cli/             # Presentation Layer: Typer CLI and HTTP client
-│   ├── services/        # Business Logic Layer: Fleet & Rental domain services
-│   ├── repositories/    # Data Access Layer: SQLAlchemy async CRUD repositories
-│   ├── models/          # ORM Layer: SQLAlchemy declarative models (Car, Rental)
-│   ├── schemas/         # Validation Layer: Pydantic V2 request & response DTOs
-│   ├── core/            # Infrastructure: Config, Async DB Engine, Logging, Metrics
-│   └── events/          # Event Layer: Domain events & publisher interface
-├── test/                # Test Suite: Unit & Integration tests (47 tests, 92% coverage)
-├── resources/sql/       # Database DDL initialization script (init.sql)
-├── docker-compose.yaml  # Container orchestration for MySQL and API
-├── Dockerfile           # Production container build
-└── main.py              # Unified entrypoint (Server and CLI)
+│   ├── dal/              # Data Access Layer
+│   |   ├── models/       # ORM Layer: SQLAlchemy declarative models (Car, Rental)
+│   |   └──repositories/  # Data Access Layer: SQLAlchemy async CRUD repositories
+│   ├── api/              # Presentation Layer: FastAPI routers, dependencies, and middleware
+│   ├── cli/              # Presentation Layer: Typer CLI and HTTP client
+│   ├── services/         # Business Logic Layer: Fleet & Rental domain services
+│   ├── schemas/          # Validation Layer: Pydantic V2 request & response DTOs
+│   ├── core/             # Infrastructure: Config, Async DB Engine, Logging, Metrics
+│   └── events/           # Event Layer: Domain events & publisher interface
+├── test/                 # Test Suite: Unit & Integration tests (47 tests, 92% coverage)
+├── resources/sql/        # Database DDL initialization script (init.sql)
+├── docker-compose.yaml   # Container orchestration for MySQL and API
+├── Dockerfile            # Production container build
+└── main.py               # Unified entrypoint (Server and CLI)
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 
@@ -98,7 +96,7 @@ docker-compose up -d --build
 
 ---
 
-## 💻 CLI Client Usage
+## CLI Client Usage
 
 The CLI client communicates with the REST API using Rich formatting:
 
@@ -145,7 +143,7 @@ uv run python main.py cli health
 
 ---
 
-## 📡 REST API Reference
+## REST API Reference
 
 | Method   | Endpoint                   | Description                                  |
 |----------|----------------------------|----------------------------------------------|
@@ -164,7 +162,7 @@ uv run python main.py cli health
 
 ---
 
-## 🧪 Testing & Code Coverage
+## Testing & Code Coverage
 
 The project includes unit tests, integration tests, and CLI tests using `pytest` and `aiosqlite` in-memory test
 databases:
@@ -174,4 +172,4 @@ databases:
 uv run pytest -v --cov=src test/
 ```
 
-Test results: **47 passed, 92% coverage**.
+Test results: **45 passed, 92% coverage**.
