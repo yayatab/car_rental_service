@@ -1,16 +1,28 @@
-# This is a sample Python script.
+import typer
+import uvicorn
 
-# Press ⇧F10 to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from src.cli.main import app as cli_app
+
+app = typer.Typer(help="DriveNow Vehicle & Rental Management System")
+
+app.add_typer(cli_app, name="cli", help="Run CLI management commands")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+@app.command("server")
+def run_server(
+        host: str = typer.Option("0.0.0.0", "--host", "-h", help="Bind host address"),
+        port: int = typer.Option(8000, "--port", "-p", help="Bind port number"),
+        reload: bool = typer.Option(False, "--reload", "-r", help="Enable auto-reload on code change")
+) -> None:
+    uvicorn.run(
+        "src.api.app:create_app",
+        factory=True,
+        host=host,
+        port=port,
+        reload=reload,
+        log_level="info"
+    )
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    app()
